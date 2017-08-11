@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul,
+        li {
+            list-style-type: none;
+        }
+        
+        ul {
+            -webkit-column-width: 132px;
+            -moz-column-width: 132px;
+            column-width: 132px;
+        }
+        
+        ul li {
+            float: left;
+        }
+        
+        ul li div {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        li img {
+            width: 75px;
+            padding: 3px;
+        }
+        .large{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="img_container" id="container"></ul>
+    <div class="large">
+        <img src="" alt="" id="large_img">
+    </div>
+</body>
+<script src="zepto.js"></script>
+<script>
+    var total = 17;
+    var tmp = '';
+    for (var i = 1; i <= total; i++) {
+        var src = "gallery/" + i + ".jpg";
+        tmp += "<li class='animated bounceIn'><div><canvas id='cvs_" + i + "'></canvas></div></li>";
+        var imageObj=new Image();
+        imageObj.index=i;
+        imageObj.onload=function(){
+            var  cvs=$('#cvs_'+this.index)[0].getContext('2d');
+            cvs.width="75px";
+            cvs.height=this.height;
+            cvs.drawImage(this,0,0);
+            
+        }
+        imageObj.src=src;
+    }
+    $("#container").html(tmp);
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

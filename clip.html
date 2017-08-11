@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: burlywood;
+        }
+        
+        #box {
+            width: 800px;
+            height: 432px;
+            position: absolute;
+            top: 100px;
+            left: 350px;
+        }
+        
+        #img {
+            width: 100%;
+            height: auto;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        #img_on {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            clip: rect(30px, 450px, 280px, 50px);
+        }
+        
+        #dot_box {
+            width: 400px;
+            height: 250px;
+            box-sizing: border-box;
+            border: 1px solid #FFF;
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            cursor: all-scroll;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #FFF;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        
+        .dot:first-child {
+            cursor: nw-resize;
+        }
+        
+        .dot:nth-child(2) {
+            left: 50%;
+            cursor: ns-resize
+        }
+        
+        .dot:nth-child(3) {
+            left: 100%;
+            cursor: ne-resize;
+        }
+        
+        .dot:nth-child(4) {
+            left: 100%;
+            top: 50%;
+            cursor: ew-resize;
+        }
+        
+        .dot:nth-child(5) {
+            left: 100%;
+            top: 100%;
+            cursor: nw-resize;
+        }
+        
+        .dot:nth-child(6) {
+            left: 50%;
+            top: 100%;
+            cursor: ns-resize
+        }
+        
+        .dot:nth-child(7) {
+            left: 0%;
+            top: 100%;
+            cursor: ne-resize;
+        }
+        
+        .dot:nth-child(8) {
+            left: 0%;
+            top: 50%;
+            cursor: ew-resize;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <img src="boot_images/app-banner.jpg" alt="" id="img">
+        <img src="boot_images/app-banner.jpg" alt="" id="img_on">
+        <div id="dot_box">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+<script src=jquery.js></script>
+<script>
+    $(function() {
+        var dot_box = $("#dot_box");
+        var dot = $('.dot');
+        var boxL = dot_box.offset().left;
+            dot.eq(3).mousemove(function(e) {
+                move(e);
+        })
+        function move(e){
+            var L = $(this).offset().left + $(this).width() / 2;
+            var eW=e.pageX;
+            var eH=e.pageY;
+            var width=dot_box.width()+(eW-L);
+            dot_box.css("width",width);
+            console.log(width);
+        }
+    })
+    xujessehua
+    jesse222
+</script>
+
+</html>

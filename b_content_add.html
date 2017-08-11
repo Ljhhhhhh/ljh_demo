@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!--小屏幕-->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="boot.html" class="navbar-brand text-primary">XMFZXW Admin</a>
+        </div>
+        <!--小屏幕-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="bootstrap.html"><span class="glyphicon glyphicon-home">&nbsp;</span>后台首页</a></li>
+                <li><a href="b_user.html"><span class="glyphicon glyphicon-user">&nbsp;</span>用户管理</a></li>
+                <li class="active"><a href="b_content.html"><span class="glyphicon glyphicon-list-alt">&nbsp;</span>内容管理</a></li>
+                <li><a href="b_tag.html"><span class="glyphicon glyphicon-tag">&nbsp;</span>标签管理</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Admin
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="boot.html"><span class="glyphicon glyphicon-screenshot">&nbsp;</span>前台首页</a></li>
+                        <li><a href="b_user.html"><span class="glyphicon glyphicon-user">&nbsp;</span>个人主页</a></li>
+                        <li><a href="b_content.html"><span class="glyphicon glyphicon-cog">&nbsp;</span>个人设置</a></li>
+                        <li><a href="b_tag.html"><span class="glyphicon glyphicon-credit-card">&nbsp;</span>账户中心</a></li>
+                        <li><a href=""><span class="glyphicon glyphicon-heart">&nbsp;</span>我的收藏</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="boot.html"><span class="glyphicon glyphicon-off">&nbsp;</span>EXIT</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="list-group">
+                <a href="b_content.html" class="list-group-item">内容管理</a>
+                <a href="b_content_add.html" class="list-group-item active">添加内容</a>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="page-header" style="margin-top: 0">
+                <h5 style="margin-top: 0">内容管理</h5>
+            </div>
+            <ul class="nav nav-tabs">
+                <li>
+                    <a href="b_content.html.html">内容管理</a>
+                </li>
+                <li class="active">
+                    <a href="b_content_add.html.html">添加内容</a>
+                </li>
+            </ul>
+            <form action="#" class="layui-form">
+                <div class="form-group">
+                    <label for="">标题</label>
+                    <input type="text" placeholder="请输入标题" class="form-control">
+                    <label for="">内容</label>
+                    <textarea name="" id="" placeholder="请输入内容" class="form-control" rows="15"></textarea>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">置顶</label>
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="switch" lay-skin="switch">
+                        </div>
+                    </div>
+                    <button class="btn btn-default" type="submit">发布文章</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="layui/layui.js"></script>
+<script>
+    layui.use('form', function() {
+        var form = layui.form();
+    })
+</script>
+</body>
+</html>

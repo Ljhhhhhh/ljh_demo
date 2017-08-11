@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!--小屏幕-->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="boot.html" class="navbar-brand text-primary">XMFZXW Admin</a>
+        </div>
+        <!--小屏幕-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="bootstrap.html"><span class="glyphicon glyphicon-home">&nbsp;</span>后台首页</a></li>
+                <li><a href="b_user.html"><span class="glyphicon glyphicon-user">&nbsp;</span>用户管理</a></li>
+                <li><a href="b_content.html"><span class="glyphicon glyphicon-list-alt">&nbsp;</span>内容管理</a></li>
+                <li class="active"><a href="b_tag.html"><span class="glyphicon glyphicon-tag">&nbsp;</span>标签管理</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Admin
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="boot.html"><span class="glyphicon glyphicon-screenshot">&nbsp;</span>前台首页</a></li>
+                        <li><a href="b_user.html"><span class="glyphicon glyphicon-user">&nbsp;</span>个人主页</a></li>
+                        <li><a href="b_content.html"><span class="glyphicon glyphicon-cog">&nbsp;</span>个人设置</a></li>
+                        <li><a href="b_tag.html"><span class="glyphicon glyphicon-credit-card">&nbsp;</span>账户中心</a></li>
+                        <li><a href=""><span class="glyphicon glyphicon-heart">&nbsp;</span>我的收藏</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="boot.html"><span class="glyphicon glyphicon-off">&nbsp;</span>EXIT</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="page-header">
+            <h1>TAG Control</h1>
+        </div>
+        <div class="col-md-12">
+            <form action="#">
+                <div class="col-md-10"><input type="text"class="form-control" placeholder="TAG Name"></div>
+                <div class="col-md-2"></div><button type="submit" class="btn btn-success">添加</button>
+            </form>
+        </div>
+        <div class="col-md-12">
+            <div class="alert alert-info alert-dismissible pull-left" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>LJH</strong>
+            </div>
+            <div class="alert alert-danger alert-dismissible pull-left" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>JLD</strong>
+            </div>
+            <div class="alert alert-success alert-dismissible pull-left" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>HELLO</strong>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="layui/layui.js"></script>
+</body>
+</html>

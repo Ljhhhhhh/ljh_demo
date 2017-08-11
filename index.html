@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+<form action="" method="post">
+    数字1<input type="text" id="num1"><br>
+    数字2<input type="text" id="num2"><br>
+    数字3<input type="text" id="num3"><br>
+    数字4<input type="text" id="num4"><br>
+    数字5<input type="text" id="num5"><br>
+    <input type="button" onclick="fun()" value="确定">
+</form>
+<script>
+    function fun(){
+        var value1=document.getElementById("num1").value;
+        var value2=document.getElementById("num2").value;
+        var value3=document.getElementById("num3").value;
+        var value4=document.getElementById("num4").value;
+        var value5=document.getElementById("num5").value;
+        var arr =[value1,value2,value3,value4,value5];
+        var max=arr[0];
+        for(var i=1;i<arr.length;i++){
+            console.log(typeof(arr[i]))
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+        console.log(arr);
+    }
+</script>
+-->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <script>
+        var elem = document.getElementsByTagName('div'); // 如果页面上有5个div 
+        for (var i = 0; i < elem.length; i++) {
+            (function(w) {
+                elem[w].onclick = function() {
+                    alert(w); // 依次为0,1,2,3,4 
+                };
+            })(i);
+        }
+
+        function createFunctions() {
+            var result = new Array();
+            for (var i = 0; i < 10; i++) {
+                result[i] = function() {
+                    return i;
+                };
+            }
+            return result;
+        }
+        for(var k=0;k<5;k++){
+//            console.log(k+'\n');
+            (function hello(k){
+                console.log(k);
+            })(k)
+        }
+        alert(k);
+    </script>
+</body>
+
+</html>
