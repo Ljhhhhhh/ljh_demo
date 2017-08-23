@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .background {
+        content: '小芒';
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        background-color: #ffd302;
+        color: #FFF;
+        font-size: 14px;
+        display: block;
+        width: 90px;
+        height: 50px;
+        line-height: 65px;
+        transform: rotate(-45deg) translate(-15px, -65%);
+    }
+    
+    .background:before {
+        content: '小芒';
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        background-color: #ffd302;
+        color: #FFF;
+        font-size: 14px;
+        display: block;
+        width: 60px;
+        height: 40px;
+        line-height: 65px;
+        transform: rotate(-45deg) translate(0px, -30px);
+    }
+    
+    span {
+        display: block;
+        height: auto;
+        float: left;
+        width: 40%;
+    }
+    
+    span:first-child {
+        font-size: 2.5em;
+        line-height: 80px;
+        color: #FFF;
+    }
+    
+    span:nth-child(2) {
+        font-size: 1em;
+        text-align: left;
+        color: #FFF;
+        line-height: 30px;
+        position: relative;
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+    
+    span:nth-child(2) strong {
+        display: block;
+        font-weight: normal;
+    }
+    
+    span:nth-child(2) em {
+        font-style: normal;
+        line-height: 30px;
+    }
+    
+    span:last-child {
+        width: 20%;
+        color: #000;
+        font-size: 1.3em;
+        float: right;
+    }
+</style>
+
+<body>
+    <div class="background">
+        <span>￥10</span>
+        <span>
+           <strong>优惠券</strong><em>满89使用</em>
+       </span>
+        <span>立即领取</span>
+    </div>
+    <ul id="uu">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script type="text/javascript">
+        var obj = (function() {
+            var a = 0;
+            return {
+                setA: function(val) {
+                    a = val;
+                },
+                getA: function() {
+                    return a;
+                }
+            }
+        }())
+        var quo = function(status) {
+            return {
+                get_status: function() {
+                    return status;
+                }
+            };
+        };
+        var myquo = quo(100);
+        var uu = document.getElementById("uu");
+        var ll = uu.getElementsByTagName("li");
+        for (var i = 0; i < ll.length; i++) {
+            ll[i].onclick = (function(i) {
+                return function() {
+                    alert(i)
+                }
+            })(i)
+        }
+
+        function f() {
+            var x = 1;
+            (function g() {
+                //                alert(x)
+            })()
+        }
+        f();
+        var p = {}
+        Object.defineProperties(p, {
+            salary: {
+                value: 100,
+                writable: false
+            },
+            gender: {
+                value: true
+            },
+        })
+
+        function Person() {
+            var say = "hello";
+            this.age = 23;
+            this.name = 'LJH';
+        }
+        Person.prototype.job = "Web";
+        var p1 = new Person();
+        var p2 = new Person();
+        Person.prototype.job = "PHP";
+        var Per = {
+            name: 'ljh',
+            age: 23,
+            address: {
+                home: 'home address',
+                office: 'office address'
+            }
+        };
+        var programer = {
+            language: 'Javascript'
+        };
+
+        function extend(p, c) {
+            var c = c || {};
+            for (var prop in p) {
+                c[prop] = p[prop];
+            }
+        }
+    </script>
+</body>
+
+</html>
